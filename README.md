@@ -139,12 +139,16 @@ Aby uruchomic aplikację lokalnie na swoim kompuetrze należy:
 1. sklonować repozytorium 
 2. Otworzyc terminal w kompilatorze (np. PyCharm)
 2. Przejść do katalogu hotel-booking
+<pre>
 cd hotel-booking
-3. Uruchomić komenedy w terminalu 
+</pre>
+4. Uruchomić komenedy w terminalu
+<pre>
 python -m venv .venv
 source .venv/bin/activate  # lub Windows activate
 python -m pip install -r requirements.lock.txt
 streamlit run app.py
+</pre>
 
 ## Experiment tracking z użyciem MLflow
 
