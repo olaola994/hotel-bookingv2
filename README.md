@@ -142,10 +142,10 @@ Aby uruchomic aplikację lokalnie na swoim kompuetrze należy:
 <pre>
 cd hotel-booking
 </pre>
-4. Uruchomić komenedy w terminalu
+4. Uruchomić komendy w terminalu
 <pre>
 python -m venv .venv
-source .venv/bin/activate  # lub Windows activate
+source .venv/bin/activate
 python -m pip install -r requirements.lock.txt
 streamlit run app.py
 </pre>
