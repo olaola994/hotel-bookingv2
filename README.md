@@ -78,7 +78,6 @@ Model został zbudowany w postaci Pipeline, aby uniknąć wycieków danych i zap
 - 5-fold cross-validation
 - metryka: ROC AUC
 
-
 ## Metryki modelu (finalna wersja)
 
 - Accuracy: ~0.77  
@@ -111,8 +110,10 @@ hotel-booking/
 │   └── raw/
 ├── eda/
 ├── model/
+├── README.md
 ├── requirements.txt
-└── README.md
+├── start.bat
+└── start.command
 </pre>
 
 Logika projektu jest rozdzielona:
@@ -121,34 +122,24 @@ Logika projektu jest rozdzielona:
 - eda/ – analiza eksploracyjna,
 - model/ – trening i ewaluacja modelu,
 
-## Uruchomienie aplikacji
+## Przenaszalność i uruchomienie aplikacji
+Aplikacja może zostać uruchomiona na systemach Windows oraz macOS przy użyciu dedykowanych skryptów startowych (start.bat dla systemu Windows oraz start.command dla systemu macOS). Użytkownik końcowy uruchamia aplikację poprzez dwukrotne kliknięcie odpowiedniego pliku. Skrypt automatycznie tworzy lokalne środowisko wirtualne, instaluje wymagane zależności na podstawie pliku requirements.txt oraz uruchamia aplikację z wykorzystaniem frameworka Streamlit.
 
-Aplikacja jest dostępna online pod danym linkiem, który należy wkleić do przeglądarki internetowej: https://hotel-bookinggit-nkylerkejgzuvdtbieyxsq.streamlit.app
+*Wymagania sprzętowe i programowe*:
+- Python w wersji 3.9 lub nowszej,
+- dostęp do Internetu podczas pierwszego uruchomienia (w celu pobrania zależności).
 
-
-## Przenośność aplikacji
-Aplikacja została zaprojektowana w sposób umożliwiający łatwe przenoszenie i uruchamianie w różnych środowiskach. Wszystkie wymagane zależności zostały jednoznacznie określone w pliku requirements.txt, co pozwala na odtworzenie środowiska uruchomieniowego na dowolnym systemie z zainstalowanym Pythonem.
-
-Kod źródłowy projektu wraz z pełną strukturą katalogów dostępny jest w publicznym repozytorium GitHub:
-
-https://github.com/olaola994/hotel-booking
-
-Repozytorium zawiera komplet plików niezbędnych do uruchomienia aplikacji, w tym kod aplikacji, model Machine Learning, dane oraz dokumentację projektu.
-
-Aby uruchomic aplikację lokalnie na swoim kompuetrze należy:
-1. sklonować repozytorium 
-2. Otworzyc terminal w kompilatorze (np. PyCharm)
-2. Przejść do katalogu hotel-booking
-<pre>
-cd hotel-booking
-</pre>
-4. Uruchomić komendy w terminalu
-<pre>
-python -m venv .venv
-source .venv/bin/activate
-python -m pip install -r requirements.lock.txt
-streamlit run app.py
-</pre>
+*Uruchomienie aplikacji*
+	1. Pobierz projekt z repozytorium GitHub https://github.com/olaola994/hotel-bookingv2 i rozpakuj archiwum ZIP z aplikacją.
+  2. Wejdź do katalogu główny projektu: hotel-bookingv2
+  3. Kliknij dwukrotnie plik startowy odpowiedni dla systemu operacyjnego na Twoim komputerze:
+  	•	Windows – start.bat
+  	•	macOS – start.command
+  4. Podczas pierwszego uruchomienia skrypt automatycznie:
+  	•	utworzy lokalne środowisko wirtualne,
+  	•	zainstaluje wymagane biblioteki,
+  	•	uruchomi aplikację.
+  5. Po zakończeniu procesu aplikacja zostanie automatycznie uruchomiona w przeglądarce internetowej pod adresem: http://localhost:8501
 
 ## Experiment tracking z użyciem MLflow
 
