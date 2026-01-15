@@ -63,7 +63,6 @@ with tab_pred:
     st.write(T["description"])
     st.subheader(T["booking"])
 
-    # ---------- INPUTS ----------
     lead_time = st.number_input(T["lead_time"], 0, 700, 50)
     adults = st.number_input(T["adults"], 0, 10, 2)
     children = st.number_input(T["children"], 0, 10, 0)
